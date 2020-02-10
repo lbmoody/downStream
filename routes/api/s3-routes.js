@@ -52,8 +52,5 @@ router.post("/upload", function (req, res) {
     
 })
 
-<<<<<<< HEAD
 // router.get
-=======
->>>>>>> e0e44d4997b59a6e0e0b30529b772c7c019e3dde
 module.exports = router
