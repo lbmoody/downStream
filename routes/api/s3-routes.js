@@ -33,11 +33,6 @@ router.post("/upload", function (req, res) {
     
         console.log(`File uploaded successfully at ${response.Location}`);
         console.log(req.user)
-        
-        raft.uploadRaft({
-            location: response.Location,
-            name: uploadFile.name
-        })
 
         res.json({ 
             location: response.Location, 
@@ -45,6 +40,12 @@ router.post("/upload", function (req, res) {
             // userId: req.user.userId, 
             // name: req.name 
         });
+        
+        raft.uploadRaft({
+            location: response.Location,
+            UserId: req.user.id, 
+            name: uploadFile.name
+        })
 
     })
 
