@@ -36,7 +36,6 @@ router.post("/upload", function (req, res) {
         
         raft.uploadRaft({
             location: response.Location,
-            UserId: req.user.id, 
             name: uploadFile.name
         })
 

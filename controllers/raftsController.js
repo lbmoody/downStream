@@ -26,9 +26,9 @@ module.exports = {
         db.Raft
             .create(
             {
-                name: req.name,
-                location: req.location,
-                UserId: req.UserId
+                name: req.body.name,
+                location: req.body.location,
+                UserId: req.user.id
             })
     }
 }
